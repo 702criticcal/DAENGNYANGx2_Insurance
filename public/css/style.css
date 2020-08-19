@@ -30,7 +30,7 @@ header .page-title{
 	-o-text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
     white-space: nowrap;
-},
+}
 hgroup,
 nav,
 section,
@@ -50,7 +50,7 @@ audio:not([controls]) {
   display: none; }
 
 html {
-  background: #fff;
+  background:rgb(228,213,196);
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -1601,6 +1601,7 @@ form textarea {
     padding: 10px 20px;
     border-radius: 3px;
     border: 1px solid #ccc;
+    background-color: rgb(239, 239, 239);
     color: #768089;
     display: inline-block;
     margin-bottom: 10px;
