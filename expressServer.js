@@ -13,6 +13,10 @@ app.get("/main", function (req, res) {
   res.render("main");
 });
 
+app.get("/insuranceByKeyword", function (req, res) {
+  res.render("insuranceByKeyword");
+});
+
 app.listen(3000, function () {
   console.log("Example app listening at http://localhost:3000");
 });
