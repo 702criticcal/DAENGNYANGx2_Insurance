@@ -13,6 +13,10 @@ app.get("/main", function (req, res) {
   res.render("main");
 });
 
+app.get("/insuranceByCollaborativeFiltering", function (req, res) {
+  res.render("insuranceByCollaborativeFiltering");
+});
+
 app.get("/insuranceByKeyword", function (req, res) {
   res.render("insuranceByKeyword");
 });

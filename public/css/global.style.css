@@ -45,7 +45,7 @@
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	background-color: red;
+	background-color: #ccc;
 }
 ::-webkit-scrollbar
 {
@@ -100,7 +100,7 @@ input,button, select, textarea, label{
 body{
 	margin: 0;
 	padding: 0;
-	background-color: rgb(228,213,196);
+	background-color: #FFF;
 	font-family: Nunito;
 	font-size: 14px;
 	color: #777;
