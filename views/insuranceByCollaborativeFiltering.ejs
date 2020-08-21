@@ -90,6 +90,9 @@
         type: "POST",
         success: function (data) {
             console.log(data);
+            for (var i in data) {
+                console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
+            }
         }
     });
 </script>
