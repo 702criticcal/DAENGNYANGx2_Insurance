@@ -1,4 +1,5 @@
 const express = require("express");
+const collaborativeFiltering = require('./collaborativeFiltering.js');
 const app = express();
 // const request = require("request");  // 모듈 import, request 가져오기
 
@@ -19,6 +20,16 @@ app.get("/insuranceByCollaborativeFiltering", function (req, res) {
 
 app.get("/insuranceByKeyword", function (req, res) {
   res.render("insuranceByKeyword");
+});
+
+app.post("/insuranceByCollaborativeFiltering", function (req, res) {
+  var recommendationResult = collaborativeFiltering.getData();
+  // console.log(recommendationResult);
+  // var data = {
+  //   rank: recommendationResult.indexOf(recommendationResult[0]),
+  //   id: recommendationResult[0]
+  // };
+  res.json(recommendationResult);
 });
 
 app.listen(3000, function () {

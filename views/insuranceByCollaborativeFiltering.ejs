@@ -83,3 +83,13 @@
     </div>
 
 </section>
+
+<script>
+    $.ajax({
+        url: "/insuranceByCollaborativeFiltering",
+        type: "POST",
+        success: function (data) {
+            console.log(data);
+        }
+    });
+</script>
