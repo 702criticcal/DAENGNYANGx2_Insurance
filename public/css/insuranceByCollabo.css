@@ -5,38 +5,11 @@
 
 - [0. Reset and Set Defaults]
 - [1. Body]
-- [2. Wrapper]
-- [3. Navigation]
-- [4. Inline Wrapper]
-- [5. Header]
-- [6. main]
-- [7. Container]
-- [8. Form Elements] 
-- [9. Accordion] 
-- [10. Wizards] 
-- [11. Tab Control] 
-- [12. Popup] 
-- [13. Lists] 
-- [14. Search] 
-- [15. Divider] 
-- [16. Posts] 
-- [17. Profile Page] 
-- [18. Post Author Page] 
-- [19. Gallery and Album] 
-- [20. Contact] 
-- [21. Product Pages] 
-- [22. Panel] 
-- [23. Bouble Menu]
-- [24. Page Loader] 
-- [25. Responsive Media Queries] 
-- [26. Background Color Helpers] 
-- [27. Text Helpers] 
-- [28. Text Animations] 
-- [29. CUSTOMIZE THE CAROUSEL] 
-- [30. Home Tabs] 
-- [31. Content Styles] 
-- [32. Home Tabs]
-- [33. Card]
+- [2. Header]
+- [3. Container]
+- [4. Card]
+- [5. Next Arrow]
+- [6. Prev Arrow]
 
 ***/
 
@@ -87,7 +60,7 @@ body {
 
 
 /*-------------------------------------------------------------------
-[5. header]
+[2. header]
 *------------------------------------------------------------------*/
 
 .go-back-link {
@@ -125,7 +98,7 @@ header .page-title {
 
 
 /*-------------------------------------------------------------------
-[7. Container]
+[3. Container]
 *------------------------------------------------------------------*/
 
 .container {
@@ -142,7 +115,7 @@ header .page-title {
 
 
 /*-------------------------------------------------------------------
-[33. Card]
+[4. Card]
 *------------------------------------------------------------------*/
 
 .cards {
@@ -324,7 +297,7 @@ header .page-title {
 
 
 /*-------------------------------------------------------------------
-[34. Next Arrow]
+[5. Next Arrow]
 *------------------------------------------------------------------*/
 
 .next-icon {
@@ -370,7 +343,7 @@ header .page-title {
 
 
 /*-------------------------------------------------------------------
-[35. Prev Arrow]
+[6. Prev Arrow]
 *------------------------------------------------------------------*/
 
 .prev-icon {
