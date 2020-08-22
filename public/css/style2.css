@@ -64,6 +64,10 @@
     font-weight: bold;
 }
 
+a {
+    text-decoration: none
+}
+
 
 /*-------------------------------------------------------------------
 [1. Body]
@@ -103,7 +107,7 @@ header .page-title {
     position: absolute;
     left: 50px;
     right: 50px;
-    top: 10px;
+    top: 15px;
     margin: 0;
     padding: 0;
     height: 30px;
@@ -127,10 +131,11 @@ header .page-title {
     height: 100px;
     display: grid;
     margin-top: 0%;
+    margin-left: 100px;
     align-content: center;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 100px 1fr 1fr 1fr 100px;
-    grid-template-areas: ". top-content top-content top-content ." ". cards cards cards ." ". botton-content botton-content botton-content next-arrow";
+    grid-template-areas: ". top-content top-content top-content ." ". cards cards cards ." ". botton-content botton-content botton-content .";
 }
 
 
@@ -316,48 +321,47 @@ header .page-title {
 }
 
 
-/*card3*/
+/*-------------------------------------------------------------------
+[34. Next Arrow]
+*------------------------------------------------------------------*/
 
-.card .multi-image3 {
-    z-index: 0;
+.next-icon {
     position: absolute;
-    right: 50%;
-    width: 0rem;
-    height: 0rem;
+    top: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
-    transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
-}
-
-.card .multi-image3 img {
-    display: grid;
-    place-items: center;
-    position: absolute;
-    width: 70%;
-    /* height: 1rem; */
-    border: none;
-    /* border-radius: 100%; */
-    background: var(--background);
-    color: var(--text);
-    transform: translate(165%, -20%);
+    width: 80px;
+    height: 60px;
     cursor: pointer;
-    transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
-    box-shadow: 0 0 0rem -0.25rem var(--background);
 }
 
-.card-image.card3 {
-    background: url("img3.jpg");
-    background-size: cover;
+.next-arrow {
+    position: absolute;
+    top: 25px;
+    width: 90%;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    animation: arrow 700ms linear infinite;
 }
 
-.card-text.card3 .date {
-    color: rgb(0, 189, 63);
+.next-arrow::after,
+.next-arrow::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 10px;
+    right: -8px;
+    background-color: #fff;
 }
 
-.card-stats.card3 .border {
-    border-left: 1px solid rgb(14, 122, 50);
-    border-right: 1px solid rgb(14, 122, 50);
+.next-arrow::after {
+    top: -12px;
+    transform: rotate(45deg);
 }
 
-.card-stats.card3 {
-    background: rgb(0, 189, 63);
+.next-arrow::before {
+    top: 12px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
 }
