@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -79,6 +80,19 @@
             <div><a href="insuranceByKeyword" class="more-btn float-right">키워드로 찾기</a></div>
         </div>
     </div>
+
+    <script>
+        $.ajax({
+            url: "/insuranceByCollaborativeFiltering",
+            type: "POST",
+            success: function(data) {
+                console.log(data);
+                for (var i in data) {
+                    console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
+                }
+            },
+        });
+    </script>
 </body>
 
 </html>
