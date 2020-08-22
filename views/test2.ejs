@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <head>
     <meta charset="UTF-8" />
@@ -12,11 +13,11 @@
         <div class="multi-image">
             <img src="img/pet1.png" alt="" width="220">
         </div>
-        <div class="card-image"></div>
+        <div class="card-image"><img src="img/db.png" alt="" width="220"></div>
         <div class="card-text">
-            <span class="date">4 days ago</span>
-            <h2>Post One</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+            <span id="firstCompany"></span>
+            <h2 id="firstInsurance"></h2>
+            <p id="firstAssurance"></p>
         </div>
         <div class="card-stats">
             <div class="stat">
@@ -39,9 +40,9 @@
         </div>
         <div class="card-image card2"></div>
         <div class="card-text card2">
-            <span class="date">1 week ago</span>
-            <h2>Post Two</h2>
-            <p>Adipisicing elit. Ducimus, repudiandae corrupti amet temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
+            <span id="secondCompany"></span>
+            <h2 id="secondInsurance"></h2>
+            <p id="secondAssurance"></p>
         </div>
         <div class="card-stats card2">
             <div class="stat">
@@ -66,7 +67,8 @@
         <div class="card-text card3">
             <span class="date">3 week ago</span>
             <h2>Post Three</h2>
-            <p>Repudiandae corrupti amet temporibus omnis provident illum maxime. Ducimus, lorem ipsum dolor adipisicing elit</p>
+            <p>Repudiandae corrupti amet temporibus omnis provident illum maxime. Ducimus, lorem ipsum dolor adipisicing
+                elit</p>
         </div>
         <div class="card-stats card3">
             <div class="stat">
@@ -83,6 +85,53 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $.ajax({
+            url: "/insuranceByCollaborativeFiltering",
+            type: "POST",
+            success: function (data) {
+                insuranceRecommendList = data;
+                $.ajax({
+                    url: "/test2",
+                    type: "POST",
+                    success: function (data) {
+                        const insurances = JSON.parse(data);
+                        // console.log('length:',insurances.insurances.length);
+                        // console.log('fullName:',insurances.insurances[0].fullName);
+                        for (var i = 0; i < insurances.insurances.length; i++) {
+                            // console.log('insuranceRecommendList[i]:',insuranceRecommendList[i]);
+                            // console.log('insurances.insurances[i]:', insurances.insurances[i]);
+                            if (insurances.insurances[i].fullName == insuranceRecommendList[i]) {
+                                if (i == 0) {
+                                    document.getElementById("firstCompany").innerHTML = insurances.insurances[i].company;
+                                    document.getElementById("firstInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                    document.getElementById("firstAssurance").innerHTML = insurances.insurances[i].assurance;
+                                }
+                                else if (i == 1) {
+                                    document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
+                                    document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                    document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
+                                }
+                                console.log(insurances.insurances[i]);
+
+                            }
+                        }
+                        // for (var i in data) {
+                        //     console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
+                        // }
+                        // $.getJSON('', function (data) {
+                        //     console.log('json file :', data);
+                        // });
+                    }
+                });
+            }
+        });
+
+        $.get("/", function (data, status) {
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    </script>
 </body>
 
 </html>
