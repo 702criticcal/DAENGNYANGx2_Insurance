@@ -1,99 +1,108 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
 
-<link rel="stylesheet" href="css/collabo.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/insuranceByCollabo.css" />
+    <title>Insurance | 펫보험 유사도 비교</title>
 
-<header>
-    <!-- extra class no-background -->
-    <a class="go-back-link" href="javascript:history.back();"><i class="fa fa-arrow-left"></i></a>
-    <h1 class="page-title">댕냥댕냥</h1>
-</header>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-<section>
+<body>
+    <header>
+        <!-- extra class no-background -->
+        <h1 class="page-title">댕냥댕냥</h1>
+    </header>
+
     <div class="container">
-
-        <div class="row mbr-justify-content-center">
-            <div class="col-lg-12 mbr-col-md-10">
-                <h3 class="entry-title">펫보험 비교보기</h3>
-                <p>[필독!] 아래 보험사별 보험료와 보상조건 등은 고객의 이해를 돕기 위해 제공하는 것으로 보험가입시 차이가 발생항 수 있습니다. 가입전 반드시 실제 보험료와 약관을 확인하시기 바랍니다.
-                </p>
+        <a href="javascript:history.back();">
+            <div class="prev-icon">
+                <div class="prev-arrow"></div>
             </div>
-            <div class="col-lg-12 mbr-col-md-10">
-                <div class="mypet">
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">(1)살 (말티즈)를 키우는 다른 분들은 이런 보험을 선택하셨습니다.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="insurance-icon"><img src="img/db.png" alt="" width="220"></div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">프로미 반려동물보험</span>
-                        </h2>
-                        <a href="#" class="button">자세히</a>
-                        <a href="#" class="button">가입</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="insurance-icon"><img src="img/hyundai.png" alt="" width="220"></div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">하이펫 애견보험
-                        </h2>
-                        <a href="#" class="button">자세히</a>
-                        <a href="#" class="button">가입</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="insurance-icon"><img src="img/lotte.png" alt="" width="220"></div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">롯데마이펫보험
-                        </h2>
-                        <a href="#" class="button">자세히</a>
-                        <a href="#" class="button">가입</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="insurance-icon"><img src="img/samsung.png" alt="" width="220"></div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">애니펫 </h2>
-                        <a href="#" class="button">자세히</a>
-                        <a href="#" class="button">가입</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 mbr-col-md-10">
-                <label class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"> 마음에 들지 않는다면, 자신에게 맞는 펫보험을 직접
-                    선택해보세요!
-                </label>
-                <div><a href="insuranceByKeyword" class="more-btn float-right">키워드로 찾기</a></div>
-            </div>
-
+        </a>
+        <div class="top-content">
+            <h3 class="entry-title">펫보험 비교보기</h3>
+            <p>[필독!] 아래 보험사별 보험료와 보상조건 등은 고객의 이해를 돕기 위해 제공하는 것으로 보험가입시 차이가 발생할 수 있습니다.</p>
+            <p>가입전 반드시 실제 보험료와 약관을 확인하시기 바랍니다.</p>
+            <p><label>1</label>살 <label>말티즈</label> 를 키우는 다른 분들은 이런 <label>보험</label>을 선택하셨습니다.</p>
         </div>
-
+        <div class="cards">
+            <div class="card">
+                <div class="multi-image">
+                    <img src="img/pet1.png" alt="" width="220">
+                </div>
+                <div class="card-image"> <img src="img/lotte.png"></div>
+                <div class="card-text">
+                    <span class="date">4 days ago</span>
+                    <h2>Post One</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="value">12 명</div>
+                        <div class="type">peple</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">자세히</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value">가입</div>
+                        <div class="type">buy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="multi-image2">
+                    <img src="img/pet2.png" alt="" width="220">
+                </div>
+                <div class="card-image card2"> <img src="img/db.png"> </div>
+                <div class="card-text card2">
+                    <span class="date">1 week ago</span>
+                    <h2>Post Two</h2>
+                    <p>Adipisicing elit. Ducimus, repudiandae corrupti amet temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
+                </div>
+                <div class="card-stats card2">
+                    <div class="stat">
+                        <div class="value">7 명</div>
+                        <div class="type">peple</div>
+                    </div>
+                    <div class="stat border">
+                        <div class="value">자세히</div>
+                        <div class="type">views</div>
+                    </div>
+                    <div class="stat">
+                        <div class="value">가입</div>
+                        <div class="type">buy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="insuranceByKeyword">
+            <div class="next-icon">
+                <div class="next-arrow"></div>
+            </div>
+        </a>
+        <div class="botton-content">
+            <p> 마음에 들지 않는다면, 자신에게 맞는 펫보험을
+                <a href="insuranceByKeyword"> <label class="keyword">키워드</label></a>로 직접 선택해보세요!
+            </p>
+        </div>
     </div>
 
-</section>
+    <script>
+        $.ajax({
+            url: "/insuranceByCollaborativeFiltering",
+            type: "POST",
+            success: function(data) {
+                console.log(data);
+                for (var i in data) {
+                    console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
+                }
+            },
+        });
+    </script>
+</body>
 
-<script>
-    $.ajax({
-        url: "/insuranceByCollaborativeFiltering",
-        type: "POST",
-        success: function(data) {
-            console.log(data);
-            for (var i in data) {
-                console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
-            }
-        }
-    });
-</script>
+</html>
