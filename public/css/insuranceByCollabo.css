@@ -198,7 +198,7 @@ header .page-title {
 }
 
 .card-text .date {
-    color: rgb(255, 7, 110);
+    color: rgb(1, 7, 110);
     font-size: 13px;
 }
 
@@ -220,7 +220,8 @@ header .page-title {
     grid-template-rows: 1fr;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: rgb(255, 7, 110);
+    background: rgb(1, 7, 110);
+    ;
 }
 
 .card-stats .stat {
@@ -233,8 +234,8 @@ header .page-title {
 }
 
 .card-stats .border {
-    border-left: 1px solid rgb(172, 26, 87);
-    border-right: 1px solid rgb(172, 26, 87);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .card-stats .value {
@@ -283,16 +284,16 @@ header .page-title {
 }
 
 .card-text.card2 .date {
-    color: rgb(255, 77, 7);
+    color: rgb(6, 119, 62);
 }
 
 .card-stats.card2 .border {
-    border-left: 1px solid rgb(185, 67, 20);
-    border-right: 1px solid rgb(185, 67, 20);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .card-stats.card2 {
-    background: rgb(255, 77, 7);
+    background: rgb(6, 119, 62);
 }
 
 

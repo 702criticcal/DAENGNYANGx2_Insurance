@@ -1,10 +1,9 @@
 {
-    "insurances": [
-        {
+    "insurances": [{
             "fullName": "삼성화재 애니펫",
             "company": "삼성화재",
             "insuranceName": "애니펫",
-            "img": "/img/samsung.png",
+            "img": "img/samsung.png",
             "assurance": [
                 "반려견 전문",
                 "배상책임 특화",
@@ -15,7 +14,7 @@
             "fullName": "DB손해보험 프로미 반려동물 보험",
             "company": "DB손해보험",
             "insuranceName": "프로미 반려동물 보험",
-            "img": "/img/db.png",
+            "img": "img/db.png",
             "assurance": [
                 "비문 사진",
                 "슬관절, 피부, 구강질환 기본보장",
@@ -26,7 +25,7 @@
             "fullName": "메리츠화재 펫퍼민트",
             "company": "메리츠화재",
             "insuranceName": "펫퍼민트",
-            "img": "/img/meritz.png",
+            "img": "img/meritz.png",
             "assurance": [
                 "가장 인기있는",
                 "배상책임 특화",
