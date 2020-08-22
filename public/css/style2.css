@@ -41,6 +41,25 @@
 ***/
 
 
+/*-------------------------------------------------------------------
+[0. Reset and Set Defaults]
+*------------------------------------------------------------------*/
+
+.top-content {
+    grid-area: top-content;
+}
+
+.top-content h3,
+.top-content p,
+.botton-content h1,
+.botton-content {
+    color: gray;
+}
+
+.botton-content {
+    grid-area: botton-content;
+}
+
 .keyword {
     font-weight: bold;
 }
