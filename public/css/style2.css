@@ -148,7 +148,7 @@ header .page-title {
 .card {
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
+    grid-template-rows: 110px 210px 80px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
     background: white;
@@ -161,8 +161,7 @@ header .page-title {
 }
 
 .card .multi-image,
-.card .multi-image2,
-.card .multi-image3 {
+.card .multi-image2 {
     z-index: 0;
     position: absolute;
     right: 50%;
@@ -199,16 +198,15 @@ header .page-title {
 .card:hover .multi-image,
 .card .multi-image:focus-within,
 .card:hover .multi-image2,
-.card .multi-image2:focus-within,
-.card:hover .multi-image3,
-.card .multi-image3:focus-within {
+.card .multi-image2:focus-within {
     width: 10rem;
     height: 10rem;
 }
 
-.card-image {
+.card-image img {
     grid-area: image;
-    background: url("img1.jpg");
+    width: 80%;
+    margin-top: 40px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
@@ -298,8 +296,9 @@ header .page-title {
     box-shadow: 0 0 0rem -0.25rem var(--background);
 }
 
-.card-image.card2 {
-    background: url("img2.jpg");
+.card-image.card2 img {
+    width: 80%;
+    margin-top: 40px;
     background-size: cover;
 }
 
