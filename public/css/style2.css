@@ -60,8 +60,10 @@
     grid-area: botton-content;
 }
 
-.keyword {
+.keyword,
+label {
     font-weight: bold;
+    color: rgb(75, 15, 128);
 }
 
 a {
