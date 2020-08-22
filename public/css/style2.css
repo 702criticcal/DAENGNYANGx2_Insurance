@@ -98,9 +98,33 @@ header .page-title {
     white-space: nowrap;
 }
 
+
+/*-------------------------------------------------------------------
+[7. Container]
+*------------------------------------------------------------------*/
+
+.container {
+    width: 1150px;
+    height: 100px;
+    display: grid;
+    margin-top: 0%;
+    align-content: center;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 100px 1fr 1fr 1fr 100px;
+    grid-template-areas: ". top-content top-content top-content ." ". cards cards cards ." ". botton-content botton-content botton-content next-arrow";
+}
+
+
 /*-------------------------------------------------------------------
 [33. Card]
 *------------------------------------------------------------------*/
+
+.cards {
+    grid-area: cards;
+    margin-top: 13%;
+    margin-left: 60px;
+    display: flex;
+}
 
 .card {
     display: grid;
