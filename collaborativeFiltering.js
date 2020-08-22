@@ -1,5 +1,6 @@
 const basicDataSet = require('./basicDataSet');
 const insuranceDataSet = require('./insuranceDataSet');
+const { Script } = require('vm');
 
 exports.getData = function() {
     var euclid = Math.sqrt(Math.pow(3.5 - 2.5, 2) + Math.pow(4.0 - 3.5, 2));
@@ -127,7 +128,8 @@ exports.getData = function() {
 
         firstRecommendation = sortable[0][0];
         secondRecommendation = sortable[1][0];
-        return [firstRecommendation, secondRecommendation];
+        thirdRecommendation = sortable[2][0];
+        return [firstRecommendation, secondRecommendation, thirdRecommendation];
     }
 
     var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, '신준수', 5, pearson_correlation),

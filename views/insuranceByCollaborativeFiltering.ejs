@@ -96,11 +96,44 @@
             url: "/insuranceByCollaborativeFiltering",
             type: "POST",
             success: function(data) {
-                console.log(data);
-                for (var i in data) {
-                    console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
-                }
-            },
+                insuranceRecommendList = data;
+                $.ajax({
+                    url: "/test2",
+                    type: "POST",
+                    success: function(data) {
+                        const insurances = JSON.parse(data);
+                        // console.log('length:',insurances.insurances.length);
+                        // console.log('fullName:',insurances.insurances[0].fullName);
+                        for (var i = 0; i < insurances.insurances.length; i++) {
+                            // console.log('insuranceRecommendList[i]:',insuranceRecommendList[i]);
+                            // console.log('insurances.insurances[i]:', insurances.insurances[i]);
+                            if (insurances.insurances[i].fullName == insuranceRecommendList[i]) {
+                                if (i == 0) {
+                                    document.getElementById("firstCompany").innerHTML = insurances.insurances[i].company;
+                                    document.getElementById("firstInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                    document.getElementById("firstAssurance").innerHTML = insurances.insurances[i].assurance;
+                                } else if (i == 1) {
+                                    document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
+                                    document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                    document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
+                                }
+                                console.log(insurances.insurances[i]);
+
+                            }
+                        }
+                        // for (var i in data) {
+                        //     console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
+                        // }
+                        // $.getJSON('', function (data) {
+                        //     console.log('json file :', data);
+                        // });
+                    }
+                });
+            }
+        });
+
+        $.get("/", function(data, status) {
+            alert("Data: " + data + "\nStatus: " + status);
         });
     </script>
 </body>
