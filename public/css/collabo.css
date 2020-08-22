@@ -38,7 +38,7 @@ section {
     background: white;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+    box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -48,12 +48,12 @@ section {
     background: white;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+    box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
 }
 
 .wrap:hover {
-    background: linear-gradient(135deg,#eee6dd 0%,#d9c3a9 100%);
+    background: linear-gradient(135deg, #eee6dd 0%, #d9c3a9 100%);
     color: white;
 }
 
@@ -67,6 +67,7 @@ section {
     margin: 1rem;
     padding-right: 1rem;
 }
+
 .vcenter {
     margin: auto;
 }
@@ -74,41 +75,53 @@ section {
 .mbr-section-title3 {
     text-align: left;
 }
+
 h2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
 .display-5 {
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.4rem;
 }
+
 .mbr-bold {
     font-weight: 700;
 }
 
- p {
+p {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     line-height: 25px;
 }
-.display-6 {
-    font-family: 'Source Sans Pro',sans-serif;
-    font-size: 1re}
 
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-.login-block{
-    background: #DE6262;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-float:left;
-width:100%;
-padding : 50px 0;
+.display-6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1re
 }
 
-.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+.login-block {
+    background: #DE6262;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFB88C, #DE6262);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: left;
+    width: 100%;
+    padding: 50px 0;
+}
 
-.more-btn{
-	background: #7965ff;
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.more-btn {
+    background: #7965ff;
     color: #fff;
     padding: 10px 40px;
     border: 1px solid #7965ff;
@@ -117,20 +130,24 @@ padding : 50px 0;
     display: inline-block;
     transition: all .3s ease-in-out;
 }
+
 .more-btn:hover,
-.more-btn.transparent{
-	background: transparent;
-	color: #7965ff
+.more-btn.transparent {
+    background: transparent;
+    color: #7965ff
 }
 
 .entry-title {
     color: #768089;
     margin-top: 10px;
     -webkit-transition: .3s ease;
-            transition: .3s ease; 
+    transition: .3s ease;
 }
 
-.button, form input[type="submit"], form button, form input[type="reset"] {
+.button,
+form input[type="submit"],
+form button,
+form input[type="reset"] {
     border: none;
     color: white;
     background: #0f75bd;
@@ -138,6 +155,16 @@ padding : 50px 0;
     border-radius: 3px;
     display: inline-block;
     -webkit-transition: .3s ease;
-            transition: .3s ease; }
-    .button:hover, form input[type="submit"]:hover, form button:hover, form input[type="reset"]:hover, .button:focus, form input[type="submit"]:focus, form button:focus, form input[type="reset"]:focus {
-      background: #1392ec; }
+    transition: .3s ease;
+}
+
+.button:hover,
+form input[type="submit"]:hover,
+form button:hover,
+form input[type="reset"]:hover,
+.button:focus,
+form input[type="submit"]:focus,
+form button:focus,
+form input[type="reset"]:focus {
+    background: #1392ec;
+}
