@@ -35,10 +35,13 @@ a {
 }
 
 h3,
-p {
+p, strong {
     color: gray;
 }
 
+strong {
+    font-weight: bold;
+}
 
 /*=========================================== 
 [1. Body]
@@ -73,10 +76,6 @@ header .page-title {
     -o-text-overflow: ellipsis;
     -ms-text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-strong {
-    font-weight: bold;
 }
 
 textarea {
@@ -271,7 +270,7 @@ form input[type="reset"] {
     /* border-radius: 100%; */
     background: var(--background);
     color: var(--text);
-    transform: translate(250%, -25%);
+    transform: translate(250%, 0%);
     cursor: pointer;
     transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
     box-shadow: 0 0 0rem -0.25rem var(--background);
@@ -339,7 +338,6 @@ form input[type="reset"] {
 }
 
 .card-stats .border {
-    border-left: 1px solid white;
     border-right: 1px solid white;
 }
 
