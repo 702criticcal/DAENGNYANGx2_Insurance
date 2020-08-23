@@ -32,13 +32,13 @@
                 <div class="multi-image">
                     <img src="img/pet1.png" alt="" width="220">
                 </div>
-                <div class="card-image"> <img src="img/lotte.png"></div>
+                <div class="card-image"> <img id="firstCompanyImg" src=""></div>
                 <div class="card-text">
-                    <span class="date">4 days ago</span>
-                    <h2>Post One</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+                    <span class="date" id="firstCompany"></span>
+                    <h2 id="firstInsurance"></h2>
+                    <p id="firstAssurance"></p>
                 </div>
-                <div class="card-stats">
+                <div class="card-stats" id ="firstStats">
                     <div class="stat">
                         <div class="value">12 명</div>
                         <div class="type">peple</div>
@@ -57,13 +57,13 @@
                 <div class="multi-image2">
                     <img src="img/pet2.png" alt="" width="220">
                 </div>
-                <div class="card-image card2"> <img src="img/db.png"> </div>
+                <div class="card-image card2"> <img id="secondCompanyImg" src=""></div>
                 <div class="card-text card2">
-                    <span class="date">1 week ago</span>
-                    <h2>Post Two</h2>
-                    <p>Adipisicing elit. Ducimus, repudiandae corrupti amet temporibus omnis provident illum maxime quod. Lorem ipsum dolor</p>
+                    <span class="date" id="secondCompany"></span>
+                    <h2 id="secondInsurance"></h2>
+                    <p id="secondAssurance"></p>
                 </div>
-                <div class="card-stats card2">
+                <div class="card-stats card2" id = "secondStats">
                     <div class="stat">
                         <div class="value">7 명</div>
                         <div class="type">peple</div>
@@ -95,46 +95,47 @@
         $.ajax({
             url: "/insuranceByCollaborativeFiltering",
             type: "POST",
-            success: function(data) {
+            success: function (data) {
                 insuranceRecommendList = data;
                 $.ajax({
-                    url: "/test2",
+                    url: "/insurance",
                     type: "POST",
-                    success: function(data) {
+                    success: function (data) {
                         const insurances = JSON.parse(data);
                         // console.log('length:',insurances.insurances.length);
                         // console.log('fullName:',insurances.insurances[0].fullName);
-                        for (var i = 0; i < insurances.insurances.length; i++) {
-                            // console.log('insuranceRecommendList[i]:',insuranceRecommendList[i]);
-                            // console.log('insurances.insurances[i]:', insurances.insurances[i]);
-                            if (insurances.insurances[i].fullName == insuranceRecommendList[i]) {
-                                if (i == 0) {
-                                    document.getElementById("firstCompany").innerHTML = insurances.insurances[i].company;
-                                    document.getElementById("firstInsurance").innerHTML = insurances.insurances[i].insuranceName;
-                                    document.getElementById("firstAssurance").innerHTML = insurances.insurances[i].assurance;
-                                } else if (i == 1) {
-                                    document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
-                                    document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
-                                    document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
+                        for (var j = 0; j < insuranceRecommendList.length; j++) {
+                            for (var i = 0; i < insurances.insurances.length; i++) {
+                                // console.log('insuranceRecommendList[i]:', insuranceRecommendList[i]);
+                                // console.log('insurances.insurances[i]:', insurances.insurances[i]);
+                                if (insurances.insurances[i].fullName == insuranceRecommendList[j]) {
+                                    if (j == 0) {
+                                        document.getElementById("firstCompany").innerHTML = insurances.insurances[i].company;
+                                        document.getElementById("firstCompany").style.color = insurances.insurances[i].color;
+                                        document.getElementById("firstInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                        document.getElementById("firstAssurance").innerHTML = insurances.insurances[i].assurance;
+                                        document.getElementById("firstCompanyImg").src = insurances.insurances[i].img;
+                                        document.getElementById("firstStats").style.background = insurances.insurances[i].color;
+                                    } else if (j == 1) {
+                                        document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
+                                        document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
+                                        document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
+                                        document.getElementById("secondCompanyImg").src = insurances.insurances[i].img;
+                                        document.getElementById("secondStats").style.background = insurances.insurances[i].color;
+                                    }
+                                    break;
+                                    // console.log(insurances.insurances[i]);
                                 }
-                                console.log(insurances.insurances[i]);
-
                             }
                         }
-                        // for (var i in data) {
-                        //     console.log('고객님과 유사한 고객님들의 ', data.indexOf(data[i]) + 1, '순위 보험 선택은 ', data[i], '입니다.');
-                        // }
-                        // $.getJSON('', function (data) {
-                        //     console.log('json file :', data);
-                        // });
                     }
                 });
             }
         });
 
-        $.get("/", function(data, status) {
-            alert("Data: " + data + "\nStatus: " + status);
-        });
+        // $.get("/", function (data, status) {
+        //     alert("Data: " + data + "\nStatus: " + status);
+        // });
     </script>
 </body>
 
