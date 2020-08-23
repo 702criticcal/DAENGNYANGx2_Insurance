@@ -32,13 +32,29 @@
                     <p>가입전 반드시 실제 보험료와 약관을 확인하시기 바랍니다.</p>
 
                     <div class="filter-links filterable-nav">
-                        <strong> 키워드 : </strong>
-                        <a href="#" class="current wow fadeInRight" data-filter="*">전체</a>
-                        <a href="#" class="wow fadeInRight" data-wow-delay=".2s" data-filter=".a">의료비 지원</a>
-                        <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".b">동물 미등록</a>
-                        <a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".c">장례비 지원</a>
+                        <strong> 키워드 </strong>
+                        <div class="contain-fluid" style="display: flex;">
+                            <div class="button-group" data-filter-group="medical">
+                                <strong> 의료비 </strong>
+                                <a href="#" class="current wow fadeInRight" data-filter="">전체</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".ok-medical">지원</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".no-medical">미지원</a>
+                            </div>
+                            <div class="button-group" data-filter-group="registered" style="margin-left: 10px">
+                                <strong> 동물 등록여부 </strong>
+                                <a href="#" class="current wow fadeInRight" data-filter="">전체</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".registered">등록</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".unregistered">미등록</a>
+                            </div>
+                            <div class="button-group" data-filter-group="funeral" style="margin-left: 10px">
+                                <strong> 장례비 </strong>
+                                <a href="#" class="current wow fadeInRight" data-filter="">전체</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".ok-funeral">지원</a>
+                                <a href="#" class="wow fadeInRight" data-filter=".no-funeral">미지원</a>
+                            </div>
+                        </div>
                     </div>
-
+                    
                     <div class="filterable-items">
                         <div class="insurance-item filterable-item a">
                             <div class="card">
@@ -74,7 +90,6 @@
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/app.js"></script>
     <script>
         $.ajax({
             url: "/insurance",
@@ -82,7 +97,6 @@
             success: function (data) {
                 const insurances = JSON.parse(data);
                 for (var i = 0; i < insurances.insurances.length; i++) {
-                    console
                     $('.filterable-items').prepend(
                         '<div class="insurance-item filterable-item ' +
                         insurances.insurances[i].category +

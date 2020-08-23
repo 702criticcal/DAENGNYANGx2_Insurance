@@ -90,20 +90,6 @@ textarea {
     box-sizing: border-box;
 }
 
-.button,
-form input[type="submit"],
-form button,
-form input[type="reset"] {
-    border: none;
-    color: white;
-    background: #0f75bd;
-    padding: 10px;
-    border-radius: 3px;
-    display: inline-block;
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-}
-
 
 /*=========================================== 
 [3. Container]
