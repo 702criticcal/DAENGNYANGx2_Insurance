@@ -75,13 +75,6 @@ header .page-title {
     white-space: nowrap;
 }
 
-html {
-    background: rgb(228, 213, 196);
-    color: #000;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
-
 strong {
     font-weight: bold;
 }
@@ -89,11 +82,6 @@ strong {
 textarea {
     overflow: auto;
     vertical-align: top;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 *,
@@ -123,6 +111,8 @@ form input[type="reset"] {
  *===========================================*/
 
 .container {
+    width: 1172px;
+    height: 100px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -138,7 +128,7 @@ form input[type="reset"] {
     height: 0;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .container {
         width: 750px;
     }
@@ -154,7 +144,18 @@ form input[type="reset"] {
     .container {
         width: 1170px;
     }
+
+@media screen and (max-width: 990px) {
+    .insurance-item {
+        width: 50%;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .insurance-item {
+        width: 100%;
+    }
+} */
 
 
 /*=========================================== 
@@ -216,27 +217,8 @@ form input[type="reset"] {
     padding: 15px;
 }
 
-@media screen and (max-width: 990px) {
-    .insurance-item {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .insurance-item {
-        width: 100%;
-    }
-}
-
-.insurance-item .insurance-icon {
-    font-size: 48px;
-    font-size: 3em;
-    color: #0f75bd;
-    margin-bottom: 20px;
-}
-
 .insurance-item .insurance-content {
-    background: #f1f1f1;
+    background: red;
     border-radius: 3px;
     padding: 30px;
     text-align: center;
@@ -247,6 +229,138 @@ form input[type="reset"] {
     font-size: 2.25em;
     font-weight: 300;
     color: #0f75bd;
+}
+
+
+/*-------------------------------------------------------------------
+[5. Card]
+*------------------------------------------------------------------*/
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 110px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-family: roboto;
+    text-align: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.card .multi-image {
+    z-index: 0;
+    position: absolute;
+    right: 50%;
+    width: 0rem;
+    height: 0rem;
+    transform: translate(-50%, -50%);
+    transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.card .multi-image img {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 50%;
+    /* height: 1rem; */
+    border: none;
+    /* border-radius: 100%; */
+    background: var(--background);
+    color: var(--text);
+    transform: translate(250%, -25%);
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+    box-shadow: 0 0 0rem -0.25rem var(--background);
+}
+
+.card .multi-image img:hover {
+    background: var(--text);
+    color: var(--background);
+    box-shadow: 0 0 1rem -0.25rem var(--background);
+}
+
+.card:hover .multi-image,
+.card .multi-image:focus-within {
+    width: 10rem;
+    height: 10rem;
+}
+
+.card-image img {
+    grid-area: image;
+    width: 80%;
+    margin-top: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+
+.card-text .date {
+    color: rgb(255, 7, 110);
+    font-size: 13px;
+}
+
+.card-text p {
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-text h2 {
+    margin-top: 0px;
+    font-size: 28px;
+}
+
+.card-stats {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: rgb(255, 7, 110);
+}
+
+.card-stats .stat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.card-stats .border {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.card-stats .value {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats .value sup {
+    font-size: 12px;
+}
+
+.card-stats .type {
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 

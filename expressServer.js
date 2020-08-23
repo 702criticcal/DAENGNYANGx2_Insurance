@@ -24,7 +24,6 @@ app.get("/insuranceByKeyword", function(req, res) {
     res.render("insuranceByKeyword");
 });
 
-
 app.post("/insurance", function(req, res) {
     res.json(insuranceJsonFile);
 });
