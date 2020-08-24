@@ -1,8 +1,11 @@
 const basicDataSet = require('./basicDataSet');
 const insuranceDataSet = require('./insuranceDataSet');
 const { Script } = require('vm');
+const data = require('./data.js');
 
 exports.getData = function () {
+    var user_name = data.user_name;
+
     var euclid = Math.sqrt(Math.pow(3.5 - 2.5, 2) + Math.pow(4.0 - 3.5, 2));
 
     var reuclid = 1 / (1 + euclid);
@@ -160,7 +163,7 @@ exports.getData = function () {
         return [firstRecommendation, secondRecommendation];
     }
 
-    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, '신준수', 5, pearson_correlation),
+    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, user_name, 5, pearson_correlation),
         insuranceDataSet.insuranceDataSet);
     // for (var i in recommendationResult) {
     //     console.log('고객님과 유사한 고객님들의 ', recommendationResult.indexOf(recommendationResult[i]) + 1, '순위 보험 선택은 ',

@@ -35,26 +35,12 @@
 //     무 : 100
 // }
 
-var yyyyMMdd = '2019/02/02' // 마이 페이지에서 입력받는 값 가져오는 걸로 수정하면 됨.
-function getAgeFromBirthDay(birth_day) {
-    var birthday = new Date(birth_day);
-    var today = new Date();
-    var age = today.getFullYear() - birthday.getFullYear();
-    // if (age < 1) {
-    //     var age = today.getMonth() - birthday.getMonth();
-    //     console.log('생후 ', age, '개월');
-    // }
-    return age
-}
-// console.log('강아지 나이 : ', getAgeFromBirthDay('2017/03/04'));
-
 // set a dataset
-// 마이 페이지에서 입력받는 값 가져오는 걸로 수정하면 됨.
 exports.basicDataSet = {
     '신준수': {
         '강아지/고양이': 1,
         '품종': 90.0,
-        '나이': (getAgeFromBirthDay(yyyyMMdd) / 10),
+        '나이': (getAgeFromBirthDay('2019/03/04') / 10),
         '성별': 1,
         '동물 등록 여부': 1,
         '중성화 여부': 100
@@ -150,3 +136,32 @@ exports.basicDataSet = {
         '중성화 여부': 100
     },
 };
+
+const data = require('./data.js');
+
+var user_name = data.user_name;
+
+if (data.kind == '말티즈') { var kind = 90; }
+else if (data.kind == '푸들') { var kind = 92; }
+
+var age = data.age;
+
+if (data.gender == '암컷') { var gender = 1; }
+else { var gender = 10000; }
+
+if (data.Neutralization == 'YES') { var neutralization = 1; }
+else { var neutralization = 100; }
+
+if (data.enrollment == 'YES') { var enrollment = 1; }
+else { var enrollment = 100; }
+
+basicDataSet.Push({
+    user_name: {
+        '강아지/고양이': 1,
+        '품종': kind,
+        '나이': (age / 10),
+        '성별': gender,
+        '동물 등록 여부': neutralization,
+        '중성화 여부': enrollment
+    }
+});
