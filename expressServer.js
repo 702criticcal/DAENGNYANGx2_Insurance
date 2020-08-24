@@ -2,6 +2,7 @@ const express = require("express");
 const collaborativeFiltering = require('./collaborativeFiltering.js');
 const app = express();
 const fs = require('fs');
+const { Router } = require("express");
 const insuranceJsonFile = fs.readFileSync('./insuranceData.json', 'utf8');
 // const request = require("request");  // 모듈 import, request 가져오기
 
