@@ -102,14 +102,10 @@
                     type: "POST",
                     success: function (data) {
                         const insurances = JSON.parse(data);
+                        console.log('asdasd', insuranceRecommendList.length);
                         for (var j = 0; j < insuranceRecommendList.length; j++) {
                             for (var i = 0; i < insurances.insurances.length; i++) {
                                 if (insurances.insurances[i].fullName == insuranceRecommendList[j][0]) {
-                                    console.log(insuranceRecommendList[0][0]);
-                                    console.log(insuranceRecommendList[0][1]);
-                                    console.log(insuranceRecommendList[1][0]);
-                                    console.log(insuranceRecommendList[1][1]);
-                                    console.log(insuranceRecommendList.length);
                                     if (j == 0) {
                                         document.getElementById("firstCompany").innerHTML = insurances.insurances[i].company;
                                         document.getElementById("firstCompany").style.color = insurances.insurances[i].color;
@@ -119,6 +115,11 @@
                                         document.getElementById("firstStats").style.background = insurances.insurances[i].color;
                                         document.getElementById("firstPeople").innerHTML = insuranceRecommendList[j][1] + " 명";
                                     } else if (j == 1) {
+                                        console.log(insurances.insurances[i].company);
+                                        console.log(insurances.insurances[i].insuranceName);
+                                        console.log(insurances.insurances[i].assurance);
+                                        console.log(insurances.insurances[i].img);
+                                        console.log(insuranceRecommendList[j][1] + " 명");
                                         document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
                                         document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
                                         document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
@@ -126,7 +127,6 @@
                                         document.getElementById("secondPeople").innerHTML = insuranceRecommendList[j][1] + " 명";
                                     }
                                     break;
-                                    // console.log(insurances.insurances[i]);
                                 }
                             }
                         }

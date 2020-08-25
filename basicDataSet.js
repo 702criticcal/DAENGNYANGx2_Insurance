@@ -35,6 +35,17 @@
 //     무 : 100
 // }
 
+function getAgeFromBirthDay(birth_day) {
+    var birthday = new Date(birth_day);
+    var today = new Date();
+    var age = today.getFullYear() - birthday.getFullYear();
+    // if (age < 1) {
+    //     var age = today.getMonth() - birthday.getMonth();
+    //     console.log('생후 ', age, '개월');
+    // }
+    return age
+}
+
 // set a dataset
 exports.basicDataSet = {
     '신준수': {
@@ -139,29 +150,29 @@ exports.basicDataSet = {
 
 const data = require('./data.js');
 
-var user_name = data.user_name;
+var user_name = data.data[0].user_name;
 
-if (data.kind == '말티즈') { var kind = 90; }
-else if (data.kind == '푸들') { var kind = 92; }
+if (data.data[0].kind == '말티즈') { var kind = 90; }
+else if (data.data[0].kind == '푸들') { var kind = 92; }
 
-var age = data.age;
+var age = data.data[0].age;
 
-if (data.gender == '암컷') { var gender = 1; }
+if (data.data[0].gender == '암컷') { var gender = 1; }
 else { var gender = 10000; }
 
-if (data.Neutralization == 'YES') { var neutralization = 1; }
+if (data.data[0].neutralization == 'YES') { var neutralization = 1; }
 else { var neutralization = 100; }
 
-if (data.enrollment == 'YES') { var enrollment = 1; }
+if (data.data[0].enrollment == 'YES') { var enrollment = 1; }
 else { var enrollment = 100; }
 
-basicDataSet.Push({
-    user_name: {
-        '강아지/고양이': 1,
-        '품종': kind,
-        '나이': (age / 10),
-        '성별': gender,
-        '동물 등록 여부': neutralization,
-        '중성화 여부': enrollment
-    }
-});
+this.basicDataSet[user_name] = {
+    '강아지/고양이': 1,
+    '품종': kind,
+    '나이': (age / 10),
+    '성별': gender,
+    '동물 등록 여부': neutralization,
+    '중성화 여부': enrollment
+};
+
+console.log(this.basicDataSet);

@@ -4,7 +4,7 @@ const { Script } = require('vm');
 const data = require('./data.js');
 
 exports.getData = function () {
-    var user_name = data.user_name;
+    var user_name = data.data[0].user_name;
 
     var euclid = Math.sqrt(Math.pow(3.5 - 2.5, 2) + Math.pow(4.0 - 3.5, 2));
 
@@ -104,6 +104,7 @@ exports.getData = function () {
     }
 
     var insuranceRecommendation = function (similar_user_result, insuranceDataSet) {
+
         var valResult = {};
         for (var index in similar_user_result) {
             user = similar_user_result[index];
@@ -122,7 +123,7 @@ exports.getData = function () {
             }
         }
 
-        numResult = {};
+        var numResult = {};
         for (var index in similar_user_result) {
             user = similar_user_result[index];
             userInsurance = insuranceDataSet[user["p"]];
@@ -163,8 +164,7 @@ exports.getData = function () {
         return [firstRecommendation, secondRecommendation];
     }
 
-    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, user_name, 5, pearson_correlation),
-        insuranceDataSet.insuranceDataSet);
+    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, user_name, 5, pearson_correlation), insuranceDataSet.insuranceDataSet);
     // for (var i in recommendationResult) {
     //     console.log('고객님과 유사한 고객님들의 ', recommendationResult.indexOf(recommendationResult[i]) + 1, '순위 보험 선택은 ',
     //         recommendationResult[i], '입니다.');
