@@ -121,9 +121,11 @@
                                         console.log(insurances.insurances[i].img);
                                         console.log(insuranceRecommendList[j][1] + " 명");
                                         document.getElementById("secondCompany").innerHTML = insurances.insurances[i].company;
+                                        document.getElementById("secondCompany").style.color = insurances.insurances[i].color;
                                         document.getElementById("secondInsurance").innerHTML = insurances.insurances[i].insuranceName;
                                         document.getElementById("secondAssurance").innerHTML = insurances.insurances[i].assurance;
                                         document.getElementById("secondCompanyImg").src = insurances.insurances[i].img;
+                                        document.getElementById("secondStats").style.background = insurances.insurances[i].color;
                                         document.getElementById("secondPeople").innerHTML = insuranceRecommendList[j][1] + " 명";
                                     }
                                     break;

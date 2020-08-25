@@ -146,6 +146,36 @@ exports.basicDataSet = {
         '동물 등록 여부': 1,
         '중성화 여부': 100
     },
+    '김소일': {
+        '강아지/고양이': 1,
+        '품종': 50.0,
+        '나이': (getAgeFromBirthDay('2015/03/04') / 10),
+        '성별': 1
+    },
+    '김소이': {
+        '강아지/고양이': 1,
+        '품종': 50.0,
+        '나이': (getAgeFromBirthDay('2009/03/04') / 10),
+        '성별': 1
+    },
+    '김소삼': {
+        '강아지/고양이': 1,
+        '품종': 50.0,
+        '나이': (getAgeFromBirthDay('2014/03/04') / 10),
+        '성별': 1
+    },
+    '김소사': {
+        '강아지/고양이': 1,
+        '품종': 50.0,
+        '나이': (getAgeFromBirthDay('2015/03/04') / 10),
+        '성별': 1
+    },
+    '김소오': {
+        '강아지/고양이': 1,
+        '품종': 50.0,
+        '나이': (getAgeFromBirthDay('2016/03/04') / 10),
+        '성별': 1
+    },
 };
 
 const data = require('./data.js');
@@ -154,6 +184,7 @@ var user_name = data.data[0].user_name;
 
 if (data.data[0].kind == '말티즈') { var kind = 90; }
 else if (data.data[0].kind == '푸들') { var kind = 92; }
+else if (data.data[0].kind == '진돗개') { var kind = 50;}
 
 var age = data.data[0].age;
 
@@ -174,5 +205,3 @@ this.basicDataSet[user_name] = {
     '동물 등록 여부': neutralization,
     '중성화 여부': enrollment
 };
-
-console.log(this.basicDataSet);

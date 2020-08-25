@@ -12,5 +12,10 @@ exports.insuranceDataSet = {
     '신준식': { insurance: '삼성화재 애니펫' },
     '신준일': { insurance: '삼성화재 애니펫' },
     '신준이': { insurance: '삼성화재 애니펫' },
-    '신준삼': { insurance: '삼성화재 애니펫' }
+    '신준삼': { insurance: '삼성화재 애니펫' },
+    '김소일': { insurance: 'NH 농협손해본험 반려동물장제비보험' },
+    '김소이': { insurance: 'NH 농협손해본험 반려동물장제비보험' },
+    '김소삼': { insurance: 'NH 농협손해본험 반려동물장제비보험' },
+    '김소사': { insurance: 'NH 농협손해본험 반려동물장제비보험' },
+    '김소오': { insurance: 'NH 농협손해본험 반려동물장제비보험' }
 };
