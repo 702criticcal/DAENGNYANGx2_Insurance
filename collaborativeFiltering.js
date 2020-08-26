@@ -165,14 +165,15 @@ exports.getData = function () {
         return [firstRecommendation, secondRecommendation];
     }
 
-    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, user_name, basicDataSet.basicDataSet.length, pearson_correlation), insuranceDataSet.insuranceDataSet);
+    var bDataSet = basicDataSet.basicDataSet
+    var recommendationResult = insuranceRecommendation(similar_user(basicDataSet.basicDataSet, user_name, 10, pearson_correlation), insuranceDataSet.insuranceDataSet);
     // for (var i in recommendationResult) {
     //     console.log('고객님과 유사한 고객님들의 ', recommendationResult.indexOf(recommendationResult[i]) + 1, '순위 보험 선택은 ',
     //         recommendationResult[i], '입니다.');
     // }
 
 
-    console.log(basicDataSet.basicDataSet);
+    console.log(Object.keys(bDataSet).length);
     console.log(similar_user(basicDataSet.basicDataSet, user_name, 5, pearson_correlation));
     console.log(recommendationResult);  
     
